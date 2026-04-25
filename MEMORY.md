@@ -23,7 +23,7 @@
 - **Scopes:** repo, read:org, read:user
 - **Key repos:** portfolio, prime_on_boarding, EKYC, clean_architecture_getx, on_process_button_widget, time_range_selector_widget, fluttergems
 
-## Context
+- **CV:** Saved at `memory/cv.md` — [Google Doc link](https://docs.google.com/document/d/15XH6-w_NpmshmCj395GpoNGYNwaaqCXaqD1HLdpQL8/edit?usp=sharing)
 
 - Software Engineer / Flutter Developer at Polygon Technology
 - Skilled in Flutter, Dart, Android, Jetpack Compose, EKYC, Firebase, ESP8266, Local AI
@@ -41,6 +41,16 @@
 - Remember user environment before suggesting
 - Optimize for local/self-hosted tools first
 - Full code examples with file names preferred
+
+## CV
+
+- **Latest:** [Google Doc](https://docs.google.com/document/d/15XH6-w_NpmshmCj395GpoNGYNwaaqCXaqD1HLdpQL8/edit?usp=sharing) — saved to `memory/cv.md`
+- **5 years** Flutter/Dart experience
+- **Skills:** Dart, Flutter, GetX, BLoC, Jetpack Compose, Firebase, EKYC, REST API
+- **Current:** Software Engineer II at Polygon Technology (since May 2024)
+- **Previous:** GTR (May 2023 - May 2024)
+- **Key projects:** EKYC packages (Bkash, City Bank, Prime Bank), Owner's Proof, Halda, Atrai, Efficient App
+- **Education:** B.Sc. CSE from HSTU (2017-2020)
 
 ---
 
