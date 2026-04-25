@@ -13,6 +13,16 @@
 - **My name:** Boltu ⚡
 - **Role:** Panna's personal AI assistant
 
+## GitHub
+
+- **Username:** shajed99
+- **Profile:** https://github.com/SHAJED99
+- **Bio:** Aspiring Flutter developer with a passion for creating beautiful and functional mobile applications.
+- **Organization:** AuroraSoft-dev
+- **Token:** Stored in environment variable GH_TOKEN (~/.local/bin/bin/gh)
+- **Scopes:** repo, read:org, read:user
+- **Key repos:** portfolio, prime_on_boarding, EKYC, clean_architecture_getx, on_process_button_widget, time_range_selector_widget, fluttergems
+
 ## Context
 
 - Software Engineer / Flutter Developer at Polygon Technology

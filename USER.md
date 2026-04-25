@@ -50,6 +50,9 @@
 - Prefer reusable, clean architecture
 - Prefer performance-optimized code
 
+- **GitHub:** @shajed99 (AuroraSoft-dev org)
+- **GitHub Profile:** https://github.com/SHAJED99
+
 ## PC Specifications
 
 - **CPU:** Intel Core i5-13600K
