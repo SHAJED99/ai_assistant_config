@@ -2,34 +2,28 @@
 
 Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
 
-## What Goes Here
+## GitHub CLI
 
-Things like:
+- **Path:** ~/.local/bin/bin/gh
+- **Auth:** Token stored in environment (GH_TOKEN)
+- **Account:** shajed99
+- **Scopes:** repo, read:org, read:user
+- **Repositories:**
+  - SHAJED99/portfolio (private)
+  - SHAJED99/prime_on_boarding (private)
+  - SHAJED99/fox_n_bunny (private)
+  - SHAJED99/owners_proof (private)
+  - SHAJED99/on_process_button_widget (public, Flutter widget)
 
-- Camera names and locations
-- SSH hosts and aliases
-- Preferred voices for TTS
-- Speaker/room names
-- Device nicknames
-- Anything environment-specific
+## ESP8266
 
-## Examples
+- **Home Automation:** ESP8266-based IoT controller for home automation
+  (details TBD - update when network info available)
 
-```markdown
-### Cameras
-
-- living-room → Main area, 180° wide angle
-- front-door → Entrance, motion-triggered
-
-### SSH
-
-- home-server → 192.168.1.100, user: admin
-
-### TTS
+## TTS
 
 - Preferred voice: "Nova" (warm, slightly British)
 - Default speaker: Kitchen HomePod
-```
 
 ## Why Separate?
 
