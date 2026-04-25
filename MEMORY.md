@@ -23,7 +23,7 @@
 - **Scopes:** repo, read:org, read:user
 - **Key repos:** portfolio, prime_on_boarding, EKYC, clean_architecture_getx, on_process_button_widget, time_range_selector_widget, fluttergems
 
-- **CV:** Saved at `memory/cv.md` — [Google Doc link](https://docs.google.com/document/d/15XH6-w_NpmshmCj395GpoNGYNwaaqCXaqD1HLdpQL8/edit?usp=sharing)
+- **LinkedIn:** https://www.linkedin.com/in/shajed99
 
 - Software Engineer / Flutter Developer at Polygon Technology
 - Skilled in Flutter, Dart, Android, Jetpack Compose, EKYC, Firebase, ESP8266, Local AI
