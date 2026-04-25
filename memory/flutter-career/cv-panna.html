@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shajedur Rahman Panna - Flutter Developer</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      font-size: 14px;
+      line-height: 1.6;
+      color: #1a1a2e;
+      background: #fff;
+      max-width: 210mm;
+      margin: 0 auto;
+      padding: 20mm 18mm;
+    }
+
+    /* Header */
+    .header {
+      text-align: center;
+      margin-bottom: 20px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid #1a1a2e;
+    }
+
+    .header h1 {
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+      color: #1a1a2e;
+      margin-bottom: 6px;
+    }
+
+    .header .title {
+      font-size: 15px;
+      font-weight: 600;
+      color: #4a4a6a;
+      margin-bottom: 10px;
+      letter-spacing: 0.5px;
+    }
+
+    .header .contact {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 16px;
+      font-size: 12px;
+      color: #555;
+    }
+
+    .header .contact a {
+      color: #1a1a2e;
+      text-decoration: none;
+    }
+
+    .header .contact span {
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    /* Section */
+    .section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 12px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      color: #6c63ff;
+      margin-bottom: 8px;
+      padding-bottom: 4px;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    /* Summary */
+    .summary p {
+      font-size: 13px;
+      color: #333;
+      text-align: justify;
+    }
+
+    /* Experience */
+    .job {
+      margin-bottom: 14px;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      margin-bottom: 2px;
+    }
+
+    .job-title {
+      font-weight: 700;
+      font-size: 14px;
+      color: #1a1a2e;
+    }
+
+    .job-company {
+      font-weight: 500;
+      font-size: 13px;
+      color: #4a4a6a;
+    }
+
+    .job-date {
+      font-size: 12px;
+      color: #888;
+      font-weight: 500;
+    }
+
+    .job ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    .job ul li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 3px;
+      font-size: 12.5px;
+      color: #333;
+    }
+
+    .job ul li::before {
+      content: '▸';
+      position: absolute;
+      left: 0;
+      color: #6c63ff;
+      font-size: 10px;
+      top: 2px;
+    }
+
+    /* Projects */
+    .projects-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+    }
+
+    .projects-table th {
+      text-align: left;
+      font-size: 11px;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #6c63ff;
+      padding: 4px 8px 4px 0;
+      border-bottom: 1px solid #e5e5e5;
+    }
+
+    .projects-table td {
+      padding: 5px 8px 5px 0;
+      vertical-align: top;
+      color: #333;
+      border-bottom: 1px solid #f0f0f0;
+    }
+
+    .projects-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .project-name {
+      font-weight: 600;
+      color: #1a1a2e;
+    }
+
+    .project-impact {
+      color: #555;
+    }
+
+    .project-tech {
+      color: #888;
+      font-size: 11px;
+    }
+
+    /* Skills */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px 20px;
+    }
+
+    .skill-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px;
+      align-items: center;
+    }
+
+    .skill-label {
+      font-weight: 600;
+      font-size: 12px;
+      color: #1a1a2e;
+      min-width: 80px;
+    }
+
+    .skill-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 3px;
+    }
+
+    .skill-tag {
+      background: #f0f0f5;
+      color: #333;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-size: 11px;
+      font-weight: 500;
+    }
+
+    .skill-tag.primary {
+      background: #6c63ff;
+      color: #fff;
+    }
+
+    /* Education */
+    .edu {
+      margin-bottom: 8px;
+    }
+
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    .edu-title {
+      font-weight: 600;
+      font-size: 13px;
+      color: #1a1a2e;
+    }
+
+    .edu-date {
+      font-size: 12px;
+      color: #888;
+    }
+
+    .edu-org {
+      font-size: 12px;
+      color: #555;
+      margin-bottom: 2px;
+    }
+
+    .edu-detail {
+      font-size: 12px;
+      color: #666;
+    }
+
+    /* Certs */
+    .certs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 4px 16px;
+    }
+
+    .cert {
+      font-size: 12px;
+      color: #333;
+      display: flex;
+      align-items: center;
+      gap: 4px;
+    }
+
+    .cert::before {
+      content: '✓';
+      color: #6c63ff;
+      font-weight: 700;
+    }
+
+    /* Reference */
+    .reference {
+      font-size: 12px;
+      color: #555;
+    }
+
+    .reference strong {
+      color: #1a1a2e;
+    }
+
+    @media print {
+      body {
+        padding: 15mm 15mm;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <div class="header">
+    <h1>Shajedur Rahman Panna</h1>
+    <div class="title">Flutter Application Developer</div>
+    <div class="contact">
+      <span>📍 Dhaka, Bangladesh</span>
+      <span>📱 +8801703718809</span>
+      <span>📧 <a href="mailto:shajedurrahmanpanna.panna@gmail.com">shajedurrahmanpanna.panna@gmail.com</a></span>
+      <span>🔗 <a href="https://linkedin.com/in/shajed99">linkedin.com/in/shajed99</a></span>
+      <span>🔗 <a href="https://github.com/SHAJED99">github.com/SHAJED99</a></span>
+    </div>
+  </div>
+
+  <!-- Summary -->
+  <div class="section">
+    <div class="section-title">Professional Summary</div>
+    <div class="summary">
+      <p>Flutter & Android Developer with <strong>5+ years</strong> of experience building production-ready mobile applications. Specialized in <strong>EKYC solutions</strong>, <strong>merchant onboarding platforms</strong>, and <strong>enterprise-grade apps for tier-1 banking clients</strong>. Proficient in Dart, Flutter, GetX, BLoC, and Jetpack Compose with a track record of delivering clean architecture and optimized performance.</p>
+    </div>
+  </div>
+
+  <!-- Work Experience -->
+  <div class="section">
+    <div class="section-title">Work Experience</div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Software Engineer II – Flutter Mobile App Developer</span>
+          <span class="job-company"> @ Polygon Technology</span>
+        </div>
+        <div class="job-date">May 2024 – Present</div>
+      </div>
+      <ul>
+        <li>Developed and maintained Flutter applications serving <strong>50,000+ active users</strong> across Play Store and App Store</li>
+        <li>Built reusable <strong>EKYC package</strong> used by bKash, City Bank, Prime Bank — <strong>reduced onboarding integration time by 60%</strong></li>
+        <li>Implemented clean architecture patterns with GetX/BLoC, reducing codebase maintenance overhead by ~30%</li>
+        <li>Collaborated with backend teams to design REST API contracts, <strong>cutting integration bugs by 40%</strong></li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-header">
+        <div>
+          <span class="job-title">Programmer – Flutter Mobile App Developer</span>
+          <span class="job-company"> @ Genuine Technology and Research Ltd (GTR)</span>
+        </div>
+        <div class="job-date">May 2023 – May 2024</div>
+      </div>
+      <ul>
+        <li>Shipped <strong>3 production apps</strong> (Owner's Proof, Halda, Atrai) from concept to store deployment</li>
+        <li>Integrated Firebase Cloud Messaging and analytics, <strong>improving user engagement tracking by 50%</strong></li>
+        <li>Reduced app crash rate from <strong>2.1% to &lt;0.5%</strong> through performance optimization and bug fixes</li>
+        <li>Mentored 2 junior developers on Flutter best practices and code review standards</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Key Projects -->
+  <div class="section">
+    <div class="section-title">Key Projects</div>
+    <table class="projects-table">
+      <thead>
+        <tr>
+          <th>Project</th>
+          <th>Impact</th>
+          <th>Tech</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="project-name">PrimeNow EKYC Package</span></td>
+          <td><span class="project-impact">Reusable package powering bKash, City Bank, Prime Bank — 40K+ users</span></td>
+          <td><span class="project-tech">Jetpack Compose, Android, Firebase</span></td>
+        </tr>
+        <tr>
+          <td><span class="project-name">City Bank Merchant Onboarding</span></td>
+          <td><span class="project-impact">Reduced onboarding from 45 mins to &lt;5 mins via NFC/OCR</span></td>
+          <td><span class="project-tech">Dart, Flutter, BLoC</span></td>
+        </tr>
+        <tr>
+          <td><span class="project-name">Prime Bank Merchant Onboarding</span></td>
+          <td><span class="project-impact">Served 10K+ merchants in first quarter post-launch</span></td>
+          <td><span class="project-tech">Dart, Flutter, BLoC</span></td>
+        </tr>
+        <tr>
+          <td><span class="project-name">bKash Merchant Onboarding</span></td>
+          <td><span class="project-impact">Part of Bangladesh's largest mobile payment ecosystem</span></td>
+          <td><span class="project-tech">Dart, Flutter, BLoC</span></td>
+        </tr>
+        <tr>
+          <td><span class="project-name">Owner's Proof</span> ⭐ 4.3</td>
+          <td><span class="project-impact">Identity verification app — 10K+ downloads on Play &amp; App Store</span></td>
+          <td><span class="project-tech">Dart, Flutter, Firebase, GetX</span></td>
+        </tr>
+        <tr>
+          <td><span class="project-name">Halda</span></td>
+          <td><span class="project-impact">Fleet management app with real-time tracking</span></td>
+          <td><span class="project-tech">Dart, Flutter, REST API, Firebase, GetX</span></td>
+        </tr>
+        <tr>
+          <td><span class="project-name">Atrai</span></td>
+          <td><span class="project-impact">Personal finance app with budget &amp; expense analytics</span></td>
+          <td><span class="project-tech">Dart, Flutter, REST API, Firebase, GetX</span></td>
+        </tr>
+        <tr>
+          <td><span class="project-name">Efficient App</span></td>
+          <td><span class="project-impact">Productivity app with task management &amp; collaboration</span></td>
+          <td><span class="project-tech">Dart, Flutter, REST API, GetX</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Technical Skills -->
+  <div class="section">
+    <div class="section-title">Technical Skills</div>
+    <div class="skills-grid">
+      <div class="skill-group">
+        <span class="skill-label">Languages:</span>
+        <div class="skill-tags">
+          <span class="skill-tag primary">Dart</span>
+          <span class="skill-tag primary">Flutter</span>
+          <span class="skill-tag">Kotlin</span>
+          <span class="skill-tag">Java</span>
+          <span class="skill-tag">Python</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-label">State Mgmt:</span>
+        <div class="skill-tags">
+          <span class="skill-tag primary">GetX (4 yrs)</span>
+          <span class="skill-tag primary">BLoC (3 yrs)</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-label">Backend:</span>
+        <div class="skill-tags">
+          <span class="skill-tag">Firebase</span>
+          <span class="skill-tag">REST API</span>
+          <span class="skill-tag">FCM</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-label">Database:</span>
+        <div class="skill-tags">
+          <span class="skill-tag">MySQL</span>
+          <span class="skill-tag">SQLite</span>
+          <span class="skill-tag">Hive</span>
+        </div>
+      </div>
+      <div class="skill-group">
+        <span class="skill-label">Tools:</span>
+        <div class="skill-tags">
+          <span class="skill-tag">Git</span>
+          <span class="skill-tag">GitHub</span>
+          <span class="skill-tag">CI/CD</span>
+          <span class="skill-tag">Clean Arch</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education -->
+  <div class="section">
+    <div class="section-title">Education</div>
+
+    <div class="edu">
+      <div class="edu-header">
+        <div class="edu-title">B.Sc. in Computer Science & Engineering</div>
+        <div class="edu-date">2017 – 2020</div>
+      </div>
+      <div class="edu-org">Hajee Mohammad Danesh Science and Technology University (HSTU), Dinajpur</div>
+      <div class="edu-detail">CGPA 2.85 / 4.00</div>
+    </div>
+
+    <div class="edu">
+      <div class="edu-header">
+        <div class="edu-title">HSC</div>
+        <div class="edu-date">2015 – 2016</div>
+      </div>
+      <div class="edu-org">Chattogram Cantonment Public College, Chittagong</div>
+      <div class="edu-detail">GPA 4.58 / 5.00</div>
+    </div>
+
+    <div class="edu">
+      <div class="edu-header">
+        <div class="edu-title">SSC</div>
+        <div class="edu-date">2014</div>
+      </div>
+      <div class="edu-org">Chattogram Cantonment High School, Chittagong</div>
+      <div class="edu-detail">GPA 5.00 / 5.00</div>
+    </div>
+  </div>
+
+  <!-- Certifications -->
+  <div class="section">
+    <div class="section-title">Certifications</div>
+    <div class="certs">
+      <div class="cert">Certificate in Flutter Development — Ostad, Eshikhon</div>
+      <div class="cert">Certificate in Web Development — LEDP</div>
+    </div>
+  </div>
+
+  <!-- Reference -->
+  <div class="section">
+    <div class="section-title">Reference</div>
+    <div class="reference">
+      <strong>Md. Abu Marjan</strong> — Lecturer, Department of CSE, HSTU &nbsp;|&nbsp;
+      📞 +8801723791394 &nbsp;|&nbsp; ✉️ marjan@hstu.ac.bd
+    </div>
+  </div>
+
+</body>
+</html>
