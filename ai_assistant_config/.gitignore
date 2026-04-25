@@ -1,0 +1,6 @@
+# .gitignore
+*.md.bak
+*.json.bak
+*.old
+*.log
+.env
