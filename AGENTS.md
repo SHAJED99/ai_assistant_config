@@ -136,6 +136,23 @@ When you receive a heartbeat poll (message matches the configured heartbeat prom
 
 You are free to edit `HEARTBEAT.md` with a short checklist or reminders. Keep it small to limit token burn.
 
+### 📌 Pinned Status Message (Telegram)
+
+- **Pin file:** `pin_status.json` in workspace
+- **Rule:** Always update the pinned status message at the start of each session and after any significant action
+- **Single pin:** Only ONE pinned message at a time — always edit & re-pin the same message, never create new pins
+- **Format:**
+```
+📌 Boltu Status
+
+🔹 Status: {status} (Working, Thinking, Processing, etc.)
+🔹 Model: {model} (current model in use)
+🔹 Task: {task} (what I'm doing + any cron jobs)
+
+⏰ {background_jobs}
+```
+- **How to update:** Read `pin_status.json` → Edit Telegram message → Re-pin if needed
+
 ### Heartbeat vs Cron: When to Use Each
 
 **Use heartbeat when:**

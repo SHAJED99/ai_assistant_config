@@ -1,0 +1,7 @@
+{
+  "chat_id": "1360002051",
+  "message_id": 2190,
+  "pinned_only_one": true,
+  "last_updated": "2026-04-27T22:06:00+06:00",
+  "template": "📌 Boltu Status\n\n🔹 Status: {status}\n🔹 Model: {model}\n🔹 Task: {task}\n\n⏰ {background_jobs}"
+}
