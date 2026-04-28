@@ -52,6 +52,12 @@
 - **Key projects:** EKYC packages (Bkash, City Bank, Prime Bank), Owner's Proof, Halda, Atrai, Efficient App
 - **Education:** B.Sc. CSE from HSTU (2017-2020)
 
+## Available Ollama Models
+
+- **Default Model:** ollama/qwen2.5:latest
+- **Also Available:** ollama/llama3.2:latest
+- **Newly Added:** llama3.2:1b (just added by Panna)
+
 ---
 
-_Last updated: 2026-04-25_
+_Last updated: 2026-04-28_
