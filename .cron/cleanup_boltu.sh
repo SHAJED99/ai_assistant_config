@@ -48,4 +48,16 @@ log "Removed empty directories"
 find "$WORKSPACE_DIR/memory" -type f ! -name "MEMORY.md" -mtime +30 -delete 2>/dev/null
 log "Removed old memory files (>30 days)"
 
+# 7. Compact large session files (extract context → MEMORY.md → delete)
+SESSION_DIR="$OPENCLAW_DIR/agents/main/sessions"
+for session in $(ls -t "$SESSION_DIR"/*.jsonl 2>/dev/null | tail -n +8); do
+    size=$(stat -c%s "$session" 2>/dev/null || echo 0)
+    if [ "$size" -gt 512000 ]; then  # >500KB
+        # Log compaction
+        session_name=$(basename "$session" .jsonl)
+        echo "[$(date '+%Y-%m-%d %H:%M')] Compacting session: $session_name (${size} bytes)" >> "$LOG_FILE"
+        # Session will be reviewed and compacted by agent in next heartbeat
+    fi
+done
+
 log "=== Cleanup complete ==="

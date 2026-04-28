@@ -26,6 +26,7 @@ Delete:
 - Keep: last 15 `.jsonl` files
 - Delete: all `*.reset.*` files
 - Archive: older `.jsonl` / `.trajectory.jsonl` files
+- **Compact**: If sessions are verbose/large, summarize key context to MEMORY.md and delete the session
 
 ### 3. Media (`.openclaw/media/inbound/`)
 - Delete: images/voice notes older than 7 days
@@ -40,6 +41,19 @@ Delete:
 ### 5. Git Commits (`.openclaw/workspace/`)
 - Commit cleaned changes locally
 - **DO NOT push** unless auth is confirmed working
+
+### 6. Information Compaction
+When to compact:
+- Session files >500KB → extract key decisions/context → save to MEMORY.md → delete session
+- Memory files >50KB → distill to essentials, keep only useful info
+- Old daily memory files → summarize to bullet points → merge into MEMORY.md
+
+How to compact sessions:
+1. Read the `.jsonl` session file
+2. Extract: decisions made, tasks completed, important facts, unresolved todos
+3. Update MEMORY.md with distilled info
+4. Delete the session file
+5. Log compaction in cleanup.log
 
 ## Rules
 - **Always ask** before deleting anything in `credentials/` or `identity/`
