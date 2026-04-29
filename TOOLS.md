@@ -2,17 +2,12 @@
 
 Skills define _how_ tools work. This file is for _your_ specifics — the stuff that's unique to your setup.
 
-## GitHub CLI
+## Google Drive / Docs
 
-- **Path:** ~/.local/bin/bin/gh
-- **Auth:** Token stored in environment (GH_TOKEN)
-- **Account:** shajed99
-- **Scopes:** repo, read:org, read:user
-- **Organizations:** AuroraSoft-dev
-- **GitHub Profile:**
-  - URL: https://github.com/SHAJED99
-  - Bio: Aspiring Flutter developer with a passion for creating beautiful and functional mobile applications.
-  - Location: Bangladesh
+- **Status:** Connected via OAuth2 (Desktop app)
+- **Auth data:** Encrypted in `.secrets.enc` (auto-refreshes tokens)
+- **Can read:** Google Docs, Drive files, Sheets
+- **Scopes:** `drive.readonly`, `documents.readonly`, `drive.file`
 
 ## GitHub Repositories
 

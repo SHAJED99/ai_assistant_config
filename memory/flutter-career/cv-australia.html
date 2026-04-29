@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shajedur Rahman Panna - Flutter Developer</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f5f5f5;
+            color: #333;
+            line-height: 1.6;
+        }
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: #fff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: #fff;
+            padding: 30px;
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+        .header img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 4px solid rgba(255,255,255,0.3);
+            object-fit: cover;
+        }
+        .header-info h1 {
+            font-size: 28px;
+            margin-bottom: 5px;
+        }
+        .header-info h2 {
+            font-size: 16px;
+            font-weight: 400;
+            opacity: 0.9;
+            margin-bottom: 10px;
+        }
+        .header-info p {
+            font-size: 13px;
+            opacity: 0.85;
+        }
+        .header-info p span { margin-right: 15px; }
+        .body { padding: 30px; }
+        .section { margin-bottom: 25px; }
+        .section h3 {
+            color: #667eea;
+            font-size: 16px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-bottom: 2px solid #667eea;
+            padding-bottom: 8px;
+            margin-bottom: 15px;
+        }
+        .summary {
+            background: #f8f9ff;
+            padding: 15px 20px;
+            border-left: 4px solid #667eea;
+            border-radius: 0 8px 8px 0;
+        }
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+        }
+        .skill-category {
+            background: #f8f9ff;
+            padding: 12px 15px;
+            border-radius: 6px;
+        }
+        .skill-category strong {
+            color: #667eea;
+            display: block;
+            font-size: 12px;
+            margin-bottom: 5px;
+        }
+        .job {
+            margin-bottom: 20px;
+        }
+        .job-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 8px;
+        }
+        .job-header h4 { color: #333; font-size: 15px; }
+        .job-header span { color: #667eea; font-size: 13px; font-weight: 500; }
+        .company {
+            color: #666;
+            font-size: 13px;
+            margin-bottom: 10px;
+            font-style: italic;
+        }
+        .job ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .job ul li {
+            padding: 4px 0 4px 20px;
+            position: relative;
+            font-size: 13px;
+        }
+        .job ul li::before {
+            content: "•";
+            color: #667eea;
+            position: absolute;
+            left: 5px;
+        }
+        .projects-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        .projects-table th, .projects-table td {
+            padding: 10px 12px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+            font-size: 13px;
+        }
+        .projects-table th {
+            background: #f8f9ff;
+            color: #667eea;
+            font-weight: 600;
+        }
+        .why-hire {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+        .why-item {
+            background: #f8f9ff;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #667eea;
+        }
+        .why-item strong { color: #667eea; display: block; margin-bottom: 5px; }
+        .footer {
+            background: #333;
+            color: #fff;
+            padding: 15px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+        }
+        .footer span { color: #667eea; }
+        @media print {
+            .container { box-shadow: none; margin: 0; }
+            .header { -webkit-print-color-adjust: exact; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABAAAAAQACAIAAADwf7zUAAAACXBIWXMAAC4jAAAuIwF4pT92AAAFv0lEQVR4nO3dW3LbMBAF0Iro/3/X0h5ZkjVQJGqe3eScOjYIgiJBkTr7vVvw9Ol0OgEAAAD4jq8kWQD+0BAA2ggANAIAjQBAIwDQePYCAPBNAmh0+wIAAAC4lABa3b4AAAAALiWA3gkA1EYAoBECaIQAOgkANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA0ggANAIAjQBAbQAA" alt="Panna" />
+            <div class="header-info">
+                <h1>Shajedur Rahman Panna</h1>
+                <h2>Senior Flutter Developer | 5+ Years | EKYC & Fintech Specialist</h2>
+                <p>
+                    <span>📍 Dhaka, Bangladesh</span>
+                    <span>📱 +8801703718809</span>
+                    <span>✉️ shajedurrahmanpanna.panna@gmail.com</span>
+                </p>
+                <p>
+                    <span>🔗 github.com/SHAJED99</span>
+                    <span>🔗 linkedin.com/in/shajed99</span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="body">
+            <div class="section">
+                <h3>Summary</h3>
+                <div class="summary">
+                    Senior Flutter Developer with 5+ years building production-grade mobile applications for fintech, banking, and enterprise clients. Specialized in <strong>EKYC/digital identity verification</strong>, merchant onboarding platforms, and clean architecture implementation. Track record of delivering scalable solutions serving <strong>50,000+ active users</strong>. Experienced in remote collaboration with international teams.
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Core Skills</h3>
+                <div class="skills-grid">
+                    <div class="skill-category">
+                        <strong>Mobile</strong>
+                        Flutter, Dart, Android, Jetpack Compose, Kotlin
+                    </div>
+                    <div class="skill-category">
+                        <strong>State Management</strong>
+                        GetX (4 yrs), BLoC (3 yrs), Riverpod
+                    </div>
+                    <div class="skill-category">
+                        <strong>Backend</strong>
+                        REST API, Firebase, GraphQL
+                    </div>
+                    <div class="skill-category">
+                        <strong>Architecture</strong>
+                        Clean Architecture, MVC, SOLID, MVP
+                    </div>
+                    <div class="skill-category">
+                        <strong>DevOps</strong>
+                        GitHub Actions, CI/CD, Firebase Distribution
+                    </div>
+                    <div class="skill-category">
+                        <strong>Tools</strong>
+                        Figma, Jira, Firebase Analytics, Fastlane
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Work Experience</h3>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <h4>Flutter Mobile App Developer — Software Engineer II</h4>
+                        <span>May 2024 – Present</span>
+                    </div>
+                    <p class="company">Polygon Technology</p>
+                    <ul>
+                        <li>Architected and shipped Flutter apps serving <strong>50,000+ active users</strong> across Play Store and App Store</li>
+                        <li>Engineered a <strong>reusable EKYC package</strong> deployed across 4 major clients (bKash, City Bank, Prime Bank) — reduced onboarding integration time by 60%</li>
+                        <li>Implemented <strong>Clean Architecture</strong> with GetX/BLoC, cutting codebase maintenance overhead by 30%</li>
+                        <li>Collaborated with backend teams to design REST API contracts, reducing integration bugs by 40%</li>
+                    </ul>
+                </div>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <h4>Flutter Mobile App Developer</h4>
+                        <span>May 2023 – May 2024</span>
+                    </div>
+                    <p class="company">Genuine Technology and Research Ltd (GTR)</p>
+                    <ul>
+                        <li>Shipped <strong>3 production apps</strong> from concept to store deployment (Owner's Proof ⭐4.3, Halda, Atrai)</li>
+                        <li>Integrated Firebase Cloud Messaging and analytics, improving user engagement tracking by 50%</li>
+                        <li>Reduced app crash rate from 2.1% to <strong>&lt;0.5%</strong> through performance optimization</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Key Projects</h3>
+                <table class="projects-table">
+                    <thead>
+                        <tr>
+                            <th>Project</th>
+                            <th>Impact</th>
+                            <th>Tech Stack</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>PrimeNow EKYC Package</strong></td>
+                            <td>40K+ users across 4 bank clients</td>
+                            <td>Jetpack Compose, Android, Firebase</td>
+                        </tr>
+                        <tr>
+                            <td><strong>City Bank Merchant Onboarding</strong></td>
+                            <td>45 mins → &lt;5 mins onboarding</td>
+                            <td>Dart, Flutter, BLoC</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Owner's Proof</strong></td>
+                            <td>10K+ downloads, ⭐4.3 Play Store</td>
+                            <td>Dart, Flutter, Firebase, GetX</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Halda</strong></td>
+                            <td>Fleet management + real-time tracking</td>
+                            <td>Dart, Flutter, REST API, Firebase</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Atrai</strong></td>
+                            <td>Personal finance + budget analytics</td>
+                            <td>Dart, Flutter, REST API, Firebase</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="section">
+                <h3>Why Hire Me?</h3>
+                <div class="why-hire">
+                    <div class="why-item">
+                        <strong>Proven at Scale</strong>
+                        50K+ active users, enterprise banking clients
+                    </div>
+                    <div class="why-item">
+                        <strong>EKYC Specialist</strong>
+                        Rare niche skill in fintech/identity verification
+                    </div>
+                    <div class="why-item">
+                        <strong>Clean Code Advocate</strong>
+                        Clean Architecture, SOLID, testable codebases
+                    </div>
+                    <div class="why-item">
+                        <strong>Remote-Ready</strong>
+                        Async collaboration, GitHub, CI/CD pipelines
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Education</h3>
+                <div class="job">
+                    <h4>B.Sc. in Computer Science & Engineering</h4>
+                    <p class="company">Hajee Mohammad Danesh Science and Technology University (HSTU) | 2017 – 2020</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>ATS Keywords</h3>
+                <p style="font-size:12px; color:#666;">
+                    Flutter Developer, Dart, GetX, BLoC, Jetpack Compose, Android, EKYC, Digital Identity, KYC, Merchant Onboarding, Firebase, REST API, Clean Architecture, Mobile App Development, CI/CD, GitHub Actions, Fintech
+                </p>
+            </div>
+        </div>
+        
+        <div class="footer">
+            <span>Open to: Remote positions, Hybrid (Sydney/Melbourne)</span>
+            <span>Visa: Not held — open to sponsorship discussion</span>
+        </div>
+    </div>
+</body>
+</html>

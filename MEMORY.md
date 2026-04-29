@@ -60,4 +60,51 @@
 
 ---
 
-_Last updated: 2026-04-28_
+## Credentials (Encrypted)
+
+All auth tokens (GitHub, Google, etc.) are stored encrypted in:
+```
+~/.openclaw/workspace/.secrets.enc
+```
+
+**To encrypt/decrypt:**
+```python
+import hashlib, base64, json
+from cryptography.fernet import Fernet
+key = hashlib.sha256(b'/home/srppc3/.openclaw/workspace').digest()
+f = Fernet(base64.urlsafe_b64encode(key))
+# Read: json.loads(f.decrypt(open('.secrets.enc','rb').read()))
+# Write: f.encrypt(json.dumps(data).encode())
+```
+
+**Current services connected:**
+- **GitHub:** account SHAJED99 (token in `.secrets.enc`)
+- **Google Drive + Docs:** OAuth with refresh_token (auto-refreshes)
+
+---
+
+_Last updated: 2026-04-29_
+
+## 🔐 Credential & File Management Rules (2026-04-29)
+
+**ENCRYPTED SECRETS:**
+- All tokens/credentials → `.secrets.enc` (Fernet encryption, workspace-derived key)
+- NEVER store raw tokens in any .md file
+- Access via: `python3 -c "import hashlib,base64,json; from cryptography.fernet import Fernet; f=Fernet(base64.urlsafe_b64encode(hashlib.sha256(b'/home/srppc3/.openclaw/workspace').digest())); print(json.loads(f.decrypt(open('.secrets.enc','rb').read())))"`
+
+**FILE CLEANUP RULES:**
+- Delete: temp scripts (google_docs_*.py, *_token.json, cleanup_*.sh, sync_*.sh, .last_sync_push)
+- Delete: duplicate images (memory/panna.png is duplicate of memory/flutter-career/panna-photo.png)
+- Keep: .gitignore updated with secrets patterns (.secrets.enc, *.token, *.key, google_tokens*, google_docs*)
+- Commit only: source files, docs, memory content — NEVER .enc files or credentials
+
+**ADD NEW CREDENTIALS:**
+1. Encrypt with workspace key → write to `.secrets.enc`
+2. Update MEMORY.md credentials section with instructions only (no raw tokens)
+3. Update `.gitignore` if new file patterns needed
+4. Delete any temp files created during auth flow
+
+**FILE AUDIT (do periodically):**
+- Check workspace for: *.py, *.json (except config), *.sh, *.log, temp files
+- Remove anything that isn't: .md, .enc, or essential config
+- Update MEMORY.md after any structural changes

@@ -1,1 +1,6 @@
 github_auth.txt
+.secrets.enc
+.google_tokens*
+.google_docs*
+*.token
+*.key
