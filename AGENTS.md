@@ -229,3 +229,22 @@ The goal: Be helpful without being annoying. Check in a few times a day, do usef
 ## Make It Yours
 
 This is a starting point. Add your own conventions, style, and rules as you figure out what works.
+
+## 🔧 User Commands (`/u_*`)
+
+These are utility commands Panna can trigger anytime:
+
+| Command | What it does |
+|---------|--------------|
+| `/u_push` | Stage + commit + push all changes |
+| `/u_pull` | Pull latest from remote |
+| `/u_sync` | Sync workspace state + push |
+| `/u_optimize` | Full cleanup: audit files, remove temp data, optimize git, report |
+| `/u_status` | Show workspace health, git status, disk usage |
+| `/u_clean` | Remove temp files (`.py`, `*_token.json`, `google_docs*`, `cleanup*`, `sync*`, `.secrets.enc`) |
+| `/u_gitlog` | Show recent git commits |
+| `/u_secrets` | Scan for exposed secrets and remove them |
+| `/u_reset` | Soft reset: restore git state, re-read memory |
+| `/u_backup` | Create local backup of workspace |
+
+**Implementation:** See `skills/utility/SKILL.md` for full details. Follow cleanup rules strictly — never store tokens in .md files, keep git clean.
