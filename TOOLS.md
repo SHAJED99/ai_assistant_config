@@ -4,9 +4,8 @@ Skills define _how_ tools work. This file is for _your_ specifics — the stuff 
 
 ## Google Drive / Docs
 
-- **Status:** Connected via OAuth2 (Desktop app)
-- **Auth data:** Encrypted in `.secrets.enc` (auto-refreshes tokens)
-- **Can read:** Google Docs, Drive files, Sheets
+- **Status:** Needs OAuth setup on fresh install (no token stored in git)
+- **Setup:** See `SETUP.md` for step-by-step auth flow
 - **Scopes:** `drive.readonly`, `documents.readonly`, `drive.file`
 
 ## GitHub Repositories
