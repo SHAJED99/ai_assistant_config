@@ -78,3 +78,8 @@ _Last updated: 2026-04-29_
 - Check workspace for: *.py, *.json (except config), *.sh, *.log, temp files
 - Remove anything that isn't: .md or essential config
 - Update MEMORY.md after any structural changes
+
+**TASKS.md — Panna's Rules:**
+- `TASKS.md` is Panna's personal instruction file — I **NEVER** edit it, only read and follow
+- Check TASKS.md when Panna asks about "tasks" or "rules"
+- Currently has: Telegram bot command cleanup pending review

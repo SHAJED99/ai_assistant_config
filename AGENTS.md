@@ -248,3 +248,11 @@ These are utility commands Panna can trigger anytime:
 | `/u_backup` | Create local backup of workspace |
 
 **Implementation:** See `skills/utility/SKILL.md` for full details. Follow cleanup rules strictly — never store tokens in .md files, keep git clean.
+
+## 📋 TASKS.md — Panna's Rules (IMmutable)
+
+**`TASKS.md` is Panna's personal instruction file. I NEVER edit it — only read and follow.**
+
+If Panna asks about "rules", "tasks", or mentions TASKS.md → read it immediately and act accordingly.
+
+Current TASKS.md location: `~/.openclaw/workspace/TASKS.md`
