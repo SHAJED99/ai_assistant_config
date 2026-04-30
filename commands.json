@@ -1,0 +1,64 @@
+{
+  "shortcuts": [
+    {
+      "command": "u_connect",
+      "description": "Connect phone to gateway via cloudflare tunnel",
+      "skill": "utility"
+    },
+    {
+      "command": "u_jobs",
+      "description": "Find remote Flutter jobs",
+      "skill": "flutter-career"
+    },
+    {
+      "command": "u_cv",
+      "description": "Optimize your CV for ATS",
+      "skill": "flutter-career"
+    },
+    {
+      "command": "u_linkedin",
+      "description": "Optimize LinkedIn profile",
+      "skill": "flutter-career"
+    },
+    {
+      "command": "u_github",
+      "description": "Upgrade GitHub portfolio",
+      "skill": "flutter-career"
+    },
+    {
+      "command": "u_apply",
+      "description": "Prepare job application",
+      "skill": "flutter-career"
+    },
+    {
+      "command": "u_career",
+      "description": "Build career roadmap",
+      "skill": "flutter-career"
+    },
+    {
+      "command": "u_push",
+      "description": "Save & push workspace to GitHub",
+      "skill": "utility"
+    },
+    {
+      "command": "u_sync",
+      "description": "Sync and update context",
+      "skill": "utility"
+    },
+    {
+      "command": "u_backup",
+      "description": "Create backup snapshot",
+      "skill": "utility"
+    },
+    {
+      "command": "u_restore",
+      "description": "Restore from GitHub repo",
+      "skill": "utility"
+    },
+    {
+      "command": "u_optimize",
+      "description": "Clean & optimize workspace",
+      "skill": "utility"
+    }
+  ]
+}

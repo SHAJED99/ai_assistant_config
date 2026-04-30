@@ -1,0 +1,4 @@
+qwen2.5:latest
+llama3.2:latest
+llama3.2:1b
+minimax-m2.7:cloud

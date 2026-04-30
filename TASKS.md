@@ -12,12 +12,12 @@ This file is Panna's personal instruction set. I must follow these rules but I c
 2. **Fresh clone = fresh auth** — All services need re-authentication on new installs (see `SETUP.md`)
 3. **`/u_*` commands must work** — All utility commands in `AGENTS.md` must be implemented and working
 4. **Workspace self-contained** — Everything needed for a fresh install must be in the git repo
+5. **There must not be redundant data or files**
 
 ## Pending Tasks (Panna's TODO)
 
 - [ ] Review and clean up Telegram bot commands in `~/.openclaw/openclaw.json`
 - [ ] Confirm which `/u_*` commands to keep/remove
-- [ ] Any other rules Panna wants to add
 
 ---
 
